@@ -8,9 +8,11 @@ namespace hostname_core.Controllers
     {
         // GET api/hostname
         [HttpGet]
-        public IEnumerable<string> Get()
+        public string Get()
         {
-            return new string[] { "hostname" };
+            var hostname = System.Net.Dns.GetHostName();
+
+            return hostname;
         }
     }
 }
