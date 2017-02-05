@@ -1,0 +1,10 @@
+FROM microsoft/dotnet:nanoserver
+
+LABEL author-name=Bhaal22 author-email=muller.john@gmail.com
+
+RUN mkdir c:\hostname
+WORKDIR c:\\hostname
+
+ADD init.server2016.cmd .
+
+CMD .\init.server2016.cmd
