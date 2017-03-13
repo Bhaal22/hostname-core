@@ -1,4 +1,9 @@
+Windows Server 2016 Instructions
+===
+
+```
 docker run -v c:\tmp\hostname-core:c:\hostname -ti microsoft/dotnet:nanoserver
+```
 
 ```
 docker build -t hostname-core:latest -f .\docker\Dockerfile.server2016 .\docker
